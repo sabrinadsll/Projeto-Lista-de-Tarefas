@@ -1,0 +1,103 @@
+:root {
+    --lilas: #CFB1F0;         /* Cor do cabeçalho e botão OK */
+    --azul-bebê: #C9DFF8;      /* Cor do card de formulário */
+    --texto: #444;
+}
+
+body {
+    background-color: #f8f9fa; /* Um cinza bem clarinho no fundo para o card branco destacar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header e Footer */
+.cabecalho, .rodape {
+    background-color: var(--lilas);
+    color: white;
+    padding: 25px 0;
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+}
+
+/* Card de Inserção */
+.cartao-azul {
+    background-color: var(--azul-bebê);
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-ok {
+    background-color: var(--lilas);
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-ok:hover {
+    filter: brightness(0.9);
+    background-color: #cfacf4;
+}
+
+/* Card da Tarefa (O que você gostou) */
+.item-tarefa {
+    background-color: white;
+    padding: 18px 25px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    border: none;
+    border-left: 8px solid var(--azul-bebê); /* Detalhe lateral */
+    transition: all 0.3s ease;
+}
+
+/* Checkbox Customizado */
+.custom-checkbox input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: var(--lilas); /* Cor do check */
+}
+
+/* Títulos e Badge */
+.titulo-tarefa {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--texto);
+    margin-bottom: 2px;
+}
+
+.badge-prioridade {
+    font-size: 0.8rem;
+    color: var(--azul-bebê);
+}
+
+/* REQUISITO: Efeito de Riscado */
+.item-tarefa.concluida .titulo-tarefa {
+    text-decoration: line-through !important;
+    color: var(--azul-bebê);
+}
+
+.item-tarefa.concluida {
+    opacity: 0.7;
+    background-color: #fcfcfc;
+}
+
+/* Botões de Ação (Editar e Excluir) */
+.btn-editar, .btn-excluir {
+    border: none;
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.btn-editar { background-color: var(--azul-bebê); }
+.btn-excluir { background-color: var(--lilas); }
+
+#campo-busca {
+    border-radius: 15px;
+    border: 2px solid var(--azul-bebê);
+    padding: 10px 20px;
+}
